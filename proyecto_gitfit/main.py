@@ -14,12 +14,14 @@ print('Elija la operacion que desea realizar:')
 print('1) DIRECTORIO DE ARCHIVOS')
 print('2) AGREGAR ARCHIVOS DE TEXTO')
 menu_option = int(input('\nIngrese: '))
+
 if menu_option == 1:
     print('\nDirectorio de archivos de la carpeta:\n') 
     basepath = ''
     with os.scandir('/Users/milton/Desktop/proyecto_gitfit/gitfit') as entries:
         for entry in entries:
             print(entry.name)
+
 
 if menu_option == 2:
     with open('readme.txt', 'w') as f:
