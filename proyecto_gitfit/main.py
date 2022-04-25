@@ -16,12 +16,14 @@ print('2) AGREGAR ARCHIVOS DE TEXTO')
 menu_option = int(input('\nIngrese: '))
 
 if menu_option == 1:
-    print('\nDirectorio de archivos de la carpeta:\n') 
-    basepath = ''
-    with os.scandir('/Users/milton/Desktop/proyecto_gitfit/gitfit') as entries:
-        for entry in entries:
-            print(entry.name)
-
+    # print('\nDirectorio de archivos de la carpeta:\n') 
+    # basepath = ''
+    # with os.scandir('/Users/milton/Desktop/proyecto_gitfit/gitfit') as entries:
+    #     for entry in entries:
+    #         print(entry.name)
+    for path, currentDirectory, files in os.walk("/Users/milton/Desktop/proyecto_gitfit/gitfit"):
+        for file in files:
+            print(file)
 
 if menu_option == 2:
     with open('readme.txt', 'w') as f:
