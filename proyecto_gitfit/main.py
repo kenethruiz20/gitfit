@@ -1,4 +1,5 @@
 import os
+#import pandas as pd
 
 # with open('data.txt', 'r') as f:
 #     data = f.read()
@@ -8,6 +9,10 @@ import os
 #     data = 'El kenny es un cule hueco'
 #     print(data)
 
+list_of_files=os.listdir()
+list_of_files.append('files.csv')
+
+pd.DataFrame({'files':list_of_files}).to_csv('files.csv')
 
 print('\nBienvenido a Git Fit =)\n')
 print('Elija la operacion que desea realizar:')
@@ -32,3 +37,11 @@ if menu_option == 2:
         print(user_text)
 
     
+'''
+Aca lo que hay que hacer es un menu
+que importe las funciones del otro archivo
+que el usuario elija que funcion utilizar
+en el init tiene que ejecutar las cosas
+o sea tiene que ejecutar el main
+\
+'''
